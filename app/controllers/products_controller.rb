@@ -1,4 +1,4 @@
-class ProductController < ApplicationController
+class ProductsController < ApplicationController
     set :default_content_type, 'application/json'
 
 
