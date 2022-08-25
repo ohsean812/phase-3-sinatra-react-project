@@ -13,7 +13,6 @@ class StoreController < ApplicationController
       store = Store.all
       store.to_json
     end
-
     
 
     get "/stores/:id" do
