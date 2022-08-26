@@ -1,12 +1,16 @@
 class ProductController < ApplicationController
         set :default_content_type, 'application/json'
 
-
         post "/products" do
-            product = Product.new_product
-            product.to_json
-          end
-
+          product = Product.create(
+            name:params[:name],
+            price:params[:price],
+            inventory:params[:inventory],
+            category:params[:category],
+            store_id:params[:store_id]
+          )
+          product.to_json
+        end
 
         get "/products" do
           products = Product.all
